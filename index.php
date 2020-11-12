@@ -11,14 +11,6 @@
 
 <body>
 
-    
-    <?php }
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
-    ?>
-
     <!--Cards-->
     <div id="cardsContainer" class="container">
         <div class="row justify-content-center">

@@ -34,7 +34,7 @@
             <div class="col mb-4">
                 <div class="card h-100 shadow" style=" background-color: #222222;">
                     <div class="inner">
-                        <img class="card-img-top" src="img/<?php $row["id"] ?>.jpg" alt="3DFX Voodoo 2 12MB">
+                        <img class="card-img-top" src="img/<?php $row["id"] ?>.jpg">
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title"><?php $row["name"] ?></h5>

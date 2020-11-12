@@ -10,54 +10,53 @@
 
 <body>
     <div class="item-container">
-            <?php
-            include "dbCredentials.php";
+        <?php
+        include "dbCredentials.php";
 
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                    }
-                    $id=$_GET['id'];
-                    $sql = "SELECT id, name, price, description FROM product WHERE id=$id";
-                    $result = $conn->query($sql);
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $id = $_GET['id'];
+        $sql = "SELECT id, name, price, description FROM product WHERE id=$id";
+        $result = $conn->query($sql);
 
-                    if ($result->num_rows > 0) {
-                    // output data of each row
-                        while ($row = $result->fetch_assoc()) {
-            ?>
-            <div class="container">
-            <div class="col-md-12">
-                <div class="product col-md-3 service-image-left">
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+        ?>
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="product col-md-3 service-image-left">
 
-                    <center>
-                        <img id="item-display" src="img/<?php echo $row["id"] ?>.jpg" alt=""></img>
-                    </center>
+                            <center>
+                                <img id="item-display" src="img/<?php echo $row["id"] ?>.jpg" alt=""></img>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="product-title"><?php echo $row["name"] ?></div>
+                        <div class="product-desc"><?php echo $row["description"] ?></div>
+                        <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+                        <hr>
+                        <div class="product-price">$ <?php echo $row["price"] ?></div>
+                        <div class="product-stock">In Stock</div>
+                        <hr>
+                        <div class="btn-group cart">
+                            <a href="chart.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Add to chart</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-7">
-                <div class="product-title"><?php echo $row["name"] ?></div>
-                <div class="product-desc"><?php echo $row["description"] ?></div>
-                <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
-                <hr>
-                <div class="product-price">$ <?php echo $row["price"] ?></div>
-                <div class="product-stock">In Stock</div>
-                <hr>
-                <div class="btn-group cart">
-                    <a href="chart.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Add to chart</a>
-                </div>
-            </div>
-        </div>
-            <?php
-                        }
-                        } else {
-                            echo "0 results";
-                        }
-            $conn->close();
-            ?>
-        </div>
+        <?php
+            }
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
+        ?>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>

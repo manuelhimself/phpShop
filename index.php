@@ -17,39 +17,40 @@
             <?php
             include "dbCredentials.php";
 
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                    }
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-                    $sql = "SELECT id, name, price, description FROM product";
-                    $result = $conn->query($sql);
+            $sql = "SELECT id, name, price, description FROM product";
+            $result = $conn->query($sql);
 
-                    if ($result->num_rows > 0) {
-                    // output data of each row
-                        while ($row = $result->fetch_assoc()) {
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while ($row = $result->fetch_assoc()) {
             ?>
-            <div class="col mb-4">
-                <div class="card shadow" style=" background-color: #222222;">
-                    <div class="inner">
-                        <img class="card-img-top" src="img/<?php echo $row["id"] ?>.jpg">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title"><?php echo $row["name"] ?></h5>
-                        <p class="card-text"><?php echo $row["description"] ?></p>
-                        <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
-                        <div class="card-footer">
-                            <a href="product.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Go to product</a>
+                    <div class="col mb-4">
+                        <div class="card shadow" style=" background-color: #222222;">
+                            <div class="inner">
+                                <img class="card-img-top" src="img/<?php echo $row["id"] ?>.jpg">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><?php echo $row["name"] ?></h5>
+                                <p class="card-text"><?php echo $row["description"] ?></p>
+                                <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
+                                <div class="card-footer">
+                                    <a href="product.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Go to product</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
             <?php
-                        }} else {
-                            echo "0 results";
-                        }
+                }
+            } else {
+                echo "0 results";
+            }
             $conn->close();
             ?>
         </div>

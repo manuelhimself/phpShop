@@ -34,14 +34,14 @@
             <div class="col mb-4">
                 <div class="card h-100 shadow" style=" background-color: #222222;">
                     <div class="inner">
-                        <img class="card-img-top" src="img/<?php $row["id"] ?>.jpg">
+                        <img class="card-img-top" src="img/<?php echo $row["id"] ?>.jpg">
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="card-title"><?php $row["name"] ?></h5>
-                        <p class="card-text"><?php $row["description"] ?></p>
-                        <p class="card-text font-weight-bold">Price: $ <?php $row["price"] ?></p>
+                        <h5 class="card-title"><?php echo $row["name"] ?></h5>
+                        <p class="card-text"><?php echo $row["description"] ?></p>
+                        <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
                         <div class="card-footer">
-                            <a href="product.php?id=<?php $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Go to product</a>
+                            <a href="product.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Go to product</a>
                         </div>
                     </div>
                 </div>

@@ -30,8 +30,6 @@
                     if ($result->num_rows > 0) {
                     // output data of each row
                         while ($row = $result->fetch_assoc()) {
-                        echo "id: " . $row["id"] . " - Name: " . $row["firstname"] . " " . $row["lastname"] . "<br>";
-
             ?>
             <div class="col mb-4">
                 <div class="card h-100 shadow" style=" background-color: #222222;">
@@ -49,8 +47,7 @@
                 </div>
             </div>
             <?php
-                        }
-                        } else {
+                        }} else {
                             echo "0 results";
                         }
             $conn->close();

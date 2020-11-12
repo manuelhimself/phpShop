@@ -26,29 +26,27 @@
                     if ($result->num_rows > 0) {
                     // output data of each row
                         while ($row = $result->fetch_assoc()) {
-                        echo "id: " . $row["id"] . " - Name: " . $row["firstname"] . " " . $row["lastname"] . "<br>";
-
             ?>
             <div class="container">
             <div class="col-md-12">
                 <div class="product col-md-3 service-image-left">
 
                     <center>
-                        <img id="item-display" src="img/<?php $row["id"] ?>.jpg" alt=""></img>
+                        <img id="item-display" src="img/<?php echo $row["id"] ?>.jpg" alt=""></img>
                     </center>
                 </div>
             </div>
 
             <div class="col-md-7">
-                <div class="product-title"><?php $row["name"] ?></div>
-                <div class="product-desc"><?php $row["description"] ?></div>
+                <div class="product-title"><?php echo $row["name"] ?></div>
+                <div class="product-desc"><?php echo $row["description"] ?></div>
                 <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
                 <hr>
-                <div class="product-price">$ <?php $row["price"] ?></div>
+                <div class="product-price">$ <?php echo $row["price"] ?></div>
                 <div class="product-stock">In Stock</div>
                 <hr>
                 <div class="btn-group cart">
-                    <a href="chart.php?id=<?php $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Add to chart</a>
+                    <a href="chart.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Add to chart</a>
                 </div>
             </div>
         </div>

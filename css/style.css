@@ -1,0 +1,30 @@
+#logo {
+    width: 40px;
+}
+
+#cardsContainer {
+    margin-top: 100px;
+}
+
+button {
+    background-color: #880101;
+    color: white;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.2);
+}

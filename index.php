@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="css/U1Card.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
@@ -32,7 +32,7 @@
                         while ($row = $result->fetch_assoc()) {
             ?>
             <div class="col mb-4">
-                <div class="card h-100 shadow" style=" background-color: #222222;">
+                <div class="card shadow" style=" background-color: #222222;">
                     <div class="inner">
                         <img class="card-img-top" src="img/<?php echo $row["id"] ?>.jpg">
                     </div>

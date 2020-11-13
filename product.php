@@ -64,7 +64,6 @@
                     </div>
 
                     <div class="col-md-7">
-                        <div class="product-title"><?php echo $row["name"] ?></div>
                         <div class="product-desc"><?php echo $row["description"] ?></div>
                         <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
                         <hr>

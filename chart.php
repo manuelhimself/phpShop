@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
@@ -38,15 +39,12 @@
                             <div class="col mb-4">
                                 <div class="card shadow" style=" background-color: #222222;">
                                     <div class="inner">
-                                        <img class="card-img-top" src="img/<?php echo $row["id"] ?>.jpg">
+                                        <img class="card-img-top" src="img/<?php echo $id ?>.jpg">
                                     </div>
                                     <div class="card-body text-center">
                                         <h5 class="card-title"><?php echo $row["name"] ?></h5>
                                         <p class="card-text"><?php echo $row["description"] ?></p>
                                         <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
-                                        <div class="card-footer">
-                                            <a href="product.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Go to product</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

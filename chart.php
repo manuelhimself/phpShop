@@ -18,9 +18,9 @@
             session_start();
             if (!isset($_SESSION['chart'])) {
                 $_SESSION['chart'] = array();
-                array_push($_SESSION['chart'], $_GET["id"]);
+                $_SESSION['chart'][] = $_GET["id"];
             } else {
-                array_push($_SESSION['chart'], $_GET["id"]);
+                $_SESSION['chart'][] = $_GET["id"];
                 foreach ($_SESSION['chart'] as $id) {
                     // Create connection
                     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -28,7 +28,6 @@
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }
-                    $id = $_GET['id'];
                     $sql = "SELECT id, name, price, description FROM product WHERE id=$id";
                     $result = $conn->query($sql);
 

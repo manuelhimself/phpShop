@@ -27,9 +27,9 @@
                     <a class="nav-link" href="add.php">Add Products</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" href="cart.php">
+            <a class="form-inline my-2 my-lg-0" href="cart.php">
                 <img id="logoCart" class="logo" src="img/cart.png" alt="Cart Logo">
-            </form>
+            </a>
         </div>
 
     </nav>

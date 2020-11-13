@@ -2,7 +2,11 @@
     color: white;
 }
 
-img.logo {
+#img {
+    width: 40px;
+}
+
+#logoCart {
     width: 40px;
 }
 

@@ -34,6 +34,8 @@
 
     </nav>
 
+    <h1>Products</h1>
+
     <!--Cards-->
     <div id="cardsContainer" class="container">
         <div class="row justify-content-center">

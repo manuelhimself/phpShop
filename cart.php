@@ -33,7 +33,9 @@
         </div>
 
     </nav>
-    
+
+    <h1>Shopping Cart</h1>
+
     <div id="cardsContainer" class="container">
         <div class="row justify-content-center">
             <?php

@@ -52,6 +52,7 @@
             // output data of each row
             while ($row = $result->fetch_assoc()) {
         ?>
+        <h1><?php echo $row["name"] ?></h1>
                 <div class="container">
                     <div class="col-md-12">
                         <div class="product col-md-3 service-image-left">

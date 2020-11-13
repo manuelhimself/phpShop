@@ -34,6 +34,8 @@
 
     </nav>
 
+    <h1>Add products</h1>
+
     <div class="item-container">
         <?php
         include "dbCredentials.php";

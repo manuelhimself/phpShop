@@ -4,24 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
+    <title>Cart - Shop.me</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark bg-dark sticky-top">
+        <!--Logo-->
+        <a class="navbar-brand" href="pavelles.html">
+            <img id="logo" class="logo" src="img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Products</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <img id="logoCart" class="logo" src="img/cart.png" alt="Cart Logo">
+            </form>
+        </div>
+
+    </nav>
     <div id="cardsContainer" class="container">
         <div class="row justify-content-center">
             <?php
             include "dbCredentials.php";
 
             session_start();
-            if (!isset($_SESSION['chart'])) {
-                $_SESSION['chart'] = array();
-                $_SESSION['chart'][] = $_GET["id"];
+            if (!isset($_SESSION['cart'])) {
+                $_SESSION['cart'] = array();
+                $_SESSION['cart'][] = $_GET["id"];
             } else {
-                $_SESSION['chart'][] = $_GET["id"];
-            }foreach ($_SESSION['chart'] as $id) {
+                $_SESSION['cart'][] = $_GET["id"];
+            }
+            foreach ($_SESSION['cart'] as $id) {
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
                 // Check connection
@@ -34,7 +58,7 @@
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while ($row = $result->fetch_assoc()) {
-        ?>
+            ?>
                         <div class="col mb-4">
                             <div class="card shadow" style=" background-color: #222222;">
                                 <div class="inner">
@@ -47,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-        <?php
+            <?php
                     }
                 }
             }

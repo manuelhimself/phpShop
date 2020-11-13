@@ -46,7 +46,7 @@
                         <div class="product-stock">In Stock</div>
                         <hr>
                         <div class="btn-group cart">
-                            <a href="chart.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Add to chart</a>
+                            <a href="cart.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Add to cart</a>
                         </div>
                     </div>
                 </div>

@@ -9,6 +9,30 @@
 </head>
 
 <body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark bg-dark sticky-top">
+        <!--Logo-->
+        <a class="navbar-brand" href="index.php">
+            <img id="logo" class="logo" src="img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="add.php">Add Products</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" href="cart.php">
+                <img id="logoCart" class="logo" src="img/cart.png" alt="Cart Logo">
+            </form>
+        </div>
+
+    </nav>
+
     <div class="item-container">
         <?php
         include "dbCredentials.php";

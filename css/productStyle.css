@@ -1,0 +1,17 @@
+* {
+    color: white;
+}
+
+#img {
+    width: 40px;
+}
+
+#logoCart {
+    width: 40px;
+    height: 40px;
+}
+
+button {
+    background-color: #880101;
+    color: white;
+}

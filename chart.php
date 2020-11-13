@@ -21,34 +21,33 @@
                 $_SESSION['chart'][] = $_GET["id"];
             } else {
                 $_SESSION['chart'][] = $_GET["id"];
-                foreach ($_SESSION['chart'] as $id) {
-                    // Create connection
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                    // Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
-                    $sql = "SELECT id, name, price, description FROM product WHERE id=$id";
-                    $result = $conn->query($sql);
+            }foreach ($_SESSION['chart'] as $id) {
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+                $sql = "SELECT id, name, price, description FROM product WHERE id=$id";
+                $result = $conn->query($sql);
 
-                    if ($result->num_rows > 0) {
-                        // output data of each row
-                        while ($row = $result->fetch_assoc()) {
-            ?>
-                            <div class="col mb-4">
-                                <div class="card shadow" style=" background-color: #222222;">
-                                    <div class="inner">
-                                        <img class="card-img-top" src="img/<?php echo $id ?>.jpg">
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title"><?php echo $row["name"] ?></h5>
-                                        <p class="card-text"><?php echo $row["description"] ?></p>
-                                        <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
-                                    </div>
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+        ?>
+                        <div class="col mb-4">
+                            <div class="card shadow" style=" background-color: #222222;">
+                                <div class="inner">
+                                    <img class="card-img-top" src="img/<?php echo $id ?>.jpg">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title"><?php echo $row["name"] ?></h5>
+                                    <p class="card-text"><?php echo $row["description"] ?></p>
+                                    <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
                                 </div>
                             </div>
-            <?php
-                        }
+                        </div>
+        <?php
                     }
                 }
             }

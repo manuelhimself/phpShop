@@ -11,7 +11,7 @@ $name = $_REQUEST["name"];
 $price = $_REQUEST["price"];
 $description = $_REQUEST["description"];
 $sql = "INSERT INTO product (name, price, description) 
-        VALUES (.$name., .$price., .$description.)";
+        VALUES ('$name', '$price', '$description')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";

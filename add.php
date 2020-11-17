@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO product (name, price, description) 
-        VALUES ('$_POST[name]','$_POST[price]','$_POST[description]')";
+        VALUES ('$_GET[name]','$_GET[price]','$_GET[description]')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";

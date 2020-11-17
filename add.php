@@ -11,7 +11,7 @@ $name = $_POST["name"];
 $price = $_POST["price"];
 $description = $_POST["description"];
 $sql = "INSERT INTO product (name, price, description) 
-        VALUES ('echo $name', 'echo $price', ' echo $description')";
+        VALUES ($name, $price, $description)";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";

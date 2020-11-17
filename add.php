@@ -7,11 +7,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$name = $_REQUEST["name"];
-$price = $_REQUEST["price"];
-$description = $_REQUEST["description"];
+
 $sql = "INSERT INTO product (name, price, description) 
-        VALUES ('$name', '$price', '$description')";
+        VALUES ('$_REQUEST[name]', '$_REQUEST[price]', '$_REQUEST[description]')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";

@@ -24,7 +24,7 @@
             <ul class="navbar-nav mr-auto">
                 <!--Links-->
                 <li class="nav-item">
-                    <a class="nav-link" href="http://www.admin.shop.me">Add Products</a>
+                    <a class="nav-link" href="http://admin.shop.me">Add Products</a>
                 </li>
             </ul>
             <a class="form-inline my-2 my-lg-0" href="cart.php">

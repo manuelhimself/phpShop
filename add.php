@@ -19,6 +19,6 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 
-header("Location: shop.me");
+header("Location: index.php");
 exit;
 ?>

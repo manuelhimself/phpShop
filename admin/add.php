@@ -1,5 +1,5 @@
 <?php
-include "dbCredentials.php";
+include "../dbCredentials.php";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,6 +19,6 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 
-header("Location: index.php");
+header("Location: http://shop.me");
 exit;
 ?>

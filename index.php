@@ -30,12 +30,12 @@ require_once "language.php";
                     <a class="nav-link" href="http://administrador.shop.me"><?php echo $languages[$lang][1] ?></a>
                 </li>
             </ul>
-            <button class="form-inline my-2 my-lg-0" onclick="changeLang('cat')">
+            <button class="form-inline my-2 my-lg-0" href="cart.php">
                 <img id="logoCart" class="logo" src="img/cat.png" alt="Cart Logo">
             </button>
-            <button class="form-inline my-2 my-lg-0" onclick="changeLang('en')">
+            <a class="form-inline my-2 my-lg-0" href="cart.php">
                 <img id="logoCart" class="logo" src="img/en.png" alt="Cart Logo">
-            </button>
+            </a>
             <a class="form-inline my-2 my-lg-0" href="cart.php">
                 <img id="logoCart" class="logo" src="img/cart.png" alt="Cart Logo">
             </a>

@@ -31,6 +31,12 @@
                 </li>
             </ul>
             <a class="form-inline my-2 my-lg-0" href="cart.php">
+                <img id="logoCart" class="logo" src="img/cat.png" alt="Cart Logo">
+            </a>
+            <a class="form-inline my-2 my-lg-0" href="cart.php">
+                <img id="logoCart" class="logo" src="img/eng.png" alt="Cart Logo">
+            </a>
+            <a class="form-inline my-2 my-lg-0" href="cart.php">
                 <img id="logoCart" class="logo" src="img/cart.png" alt="Cart Logo">
             </a>
         </div>

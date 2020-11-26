@@ -1,3 +1,6 @@
+<?php 
+    require_once "language.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +27,7 @@
             <ul class="navbar-nav mr-auto">
                 <!--Links-->
                 <li class="nav-item">
-                    <a class="nav-link" href="http://administrador.shop.me">Add Products</a>
+                    <a class="nav-link" href="http://administrador.shop.me"><?php echo $languages[$lang][1] ?></a>
                 </li>
             </ul>
             <a class="form-inline my-2 my-lg-0" href="cart.php">
@@ -34,22 +37,22 @@
 
     </nav>
 
-    <h1>Add products</h1>
+    <h1><?php echo $languages[$lang][1] ?></h1>
 
     <form action="add.php">
-        <label>Name:</label>
+        <label><?php echo $languages[$lang][6] ?>:</label>
         <br>
         <input id="name" name="name" type="text">
         <br>
-        <label>Price in USD:</label>
+        <label><?php echo $languages[$lang][7] ?>:</label>
         <br>
         <input id="price" name="price" type="text">
         <br>
-        <label>Description:</label>
+        <label><?php echo $languages[$lang][8] ?>:</label>
         <br>
         <textarea name="description" id="description" rows="10" cols="40"></textarea>
         <br>
-        <label>Image:</label>
+        <label><?php echo $languages[$lang][9] ?>:</label>
         <br>
         <input type="file" name="fileToUpload" id="fileToUpload" accept="image/x-png,image/gif,image/jpeg">
         <br>

@@ -27,7 +27,7 @@
             <ul class="navbar-nav mr-auto">
                 <!--Links-->
                 <li class="nav-item">
-                    <a class="nav-link" href="http://administrador.shop.me">Add Products</a>
+                    <a class="nav-link" href="http://administrador.shop.me"><?php echo $languages[$lang][1] ?></a>
                 </li>
             </ul>
             <a class="form-inline my-2 my-lg-0" href="cart.php">
@@ -71,10 +71,10 @@
                         <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
                         <hr>
                         <div class="product-price">$ <?php echo $row["price"] ?></div>
-                        <div class="product-stock">In Stock</div>
+                        <div class="product-stock"><?php echo $languages[$lang][3] ?></div>
                         <hr>
                         <div class="btn-group cart">
-                            <a href="cart.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Add to cart</a>
+                            <a href="cart.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;"><?php echo $languages[$lang][4] ?></a>
                         </div>
                     </div>
                 </div>

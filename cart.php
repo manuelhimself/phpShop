@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png">
-    <title>Cart - Shop.me</title>
+    <title><?php echo $languages[$lang][5] ?> - Shop.me</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
@@ -27,7 +27,7 @@
             <ul class="navbar-nav mr-auto">
                 <!--Links-->
                 <li class="nav-item">
-                    <a class="nav-link" href="http://administrador.shop.me">Add Products</a>
+                    <a class="nav-link" href="http://administrador.shop.me"><?php echo $languages[$lang][1] ?></a>
                 </li>
             </ul>
             <a class="form-inline my-2 my-lg-0" href="cart.php">
@@ -37,7 +37,7 @@
 
     </nav>
 
-    <h1>Shopping Cart</h1>
+    <h1><?php echo $languages[$lang][5] ?></h1>
 
     <div id="cardsContainer" class="container">
         <div class="row justify-content-center">
@@ -73,7 +73,7 @@
                                 <div class="card-body text-center">
                                     <h5 class="card-title"><?php echo $row["name"] ?></h5>
                                     <p class="card-text"><?php echo $row["description"] ?></p>
-                                    <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
+                                    <p class="card-text font-weight-bold"><?php echo $languages[$lang][2] ?>: $ <?php echo $row["price"] ?></p>
                                 </div>
                             </div>
                         </div>

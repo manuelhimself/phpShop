@@ -1,13 +1,13 @@
-<?php 
-    require_once "language.php";
+<?php
+require_once "language.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $lang ?>">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop.me - Products</title>
+    <title>Shop.me - <?php echo $languages[$lang][0] ?></title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
@@ -27,15 +27,15 @@
             <ul class="navbar-nav mr-auto">
                 <!--Links-->
                 <li class="nav-item">
-                    <a class="nav-link" href="http://administrador.shop.me">Add Products</a>
+                    <a class="nav-link" href="http://administrador.shop.me"><?php echo $languages[$lang][1] ?></a>
                 </li>
             </ul>
-            <a class="form-inline my-2 my-lg-0" href="cart.php">
+            <button class="form-inline my-2 my-lg-0" onclick="changeLang('cat')">
                 <img id="logoCart" class="logo" src="img/cat.png" alt="Cart Logo">
-            </a>
-            <a class="form-inline my-2 my-lg-0" href="cart.php">
-                <img id="logoCart" class="logo" src="img/eng.png" alt="Cart Logo">
-            </a>
+            </button>
+            <button class="form-inline my-2 my-lg-0" onclick="changeLang('en')">
+                <img id="logoCart" class="logo" src="img/en.png" alt="Cart Logo">
+            </button>
             <a class="form-inline my-2 my-lg-0" href="cart.php">
                 <img id="logoCart" class="logo" src="img/cart.png" alt="Cart Logo">
             </a>
@@ -43,7 +43,7 @@
 
     </nav>
 
-    <h1>Products</h1>
+    <h1><?php echo $languages[$lang][0] ?></h1>
 
     <!--Cards-->
     <div id="cardsContainer" class="container">
@@ -73,7 +73,7 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title"><?php echo $row["name"] ?></h5>
                                 <p class="card-text"><?php echo $row["description"] ?></p>
-                                <p class="card-text font-weight-bold">Price: $ <?php echo $row["price"] ?></p>
+                                <p class="card-text font-weight-bold"><?php echo $languages[$lang][2] ?>: $ <?php echo $row["price"] ?></p>
                                 <div class="card-footer">
                                     <a href="product.php?id=<?php echo $row["id"] ?>" class="btn" style="background-color:#880101; color: white;">Go to product</a>
                                 </div>

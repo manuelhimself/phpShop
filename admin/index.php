@@ -30,7 +30,7 @@
                     <a class="nav-link" href="http://administrador.shop.me"><?php echo $languages[$lang][1] ?></a>
                 </li>
             </ul>
-            <a class="form-inline my-2 my-lg-0" href="http://shop.me/cart.php">
+            <a class="form-inline my-2 my-lg-0" href="http://shop.me">
                 <img id="logoCart" class="logo" src="../img/cart.png" alt="Cart Logo">
             </a>
         </div>

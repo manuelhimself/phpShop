@@ -1,5 +1,5 @@
-<?php 
-    require_once "language.php";
+<?php
+require_once "language.php";
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang ?>">
@@ -58,7 +58,9 @@
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-                $sql = "SELECT id, name, price, description FROM product WHERE id=$id";
+                $sql = "SELECT product.id, product.name, product.price, $lang.description
+                FROM product, $lang
+                WHERE product.id = $id AND product.id = $lang.idProduct";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {

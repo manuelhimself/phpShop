@@ -58,7 +58,9 @@ require_once "language.php";
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT id, name, price, description FROM product";
+            $sql = "SELECT product.id, product.name, product.price, $lang.description
+            FROM product, $lang
+            WHERE product.id = $lang.idProduct";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

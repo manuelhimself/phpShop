@@ -5,6 +5,9 @@ $languages = array(
     "ca" => array("Productes", "Afegeix Productes", "Preu", "En estoc", "Afegeix al carretó", "Carretó", "Nom", "Preu en dòlrs americans", "Descripció", "Imatge")
 );
 
-function changeLang($newLang){
-    $GLOBALS['lang'] = $newLang;
-}
+if( $_GET["lang"]) {
+    
+    $lang = $_GET["lang"];
+    
+    exit();
+ }

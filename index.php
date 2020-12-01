@@ -31,7 +31,7 @@ require_once "language.php";
                 </li>
             </ul>
             <button class="form-inline my-2 my-lg-0" href="cart.php">
-                <img id="logoCart" class="logo" src="img/cat.png" alt="Cart Logo">
+                <img id="logoCart" class="logo" src="img/ca.png" alt="Cart Logo">
             </button>
             <a class="form-inline my-2 my-lg-0" href="cart.php">
                 <img id="logoCart" class="logo" src="img/en.png" alt="Cart Logo">

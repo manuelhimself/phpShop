@@ -10,4 +10,5 @@ if( $_GET["lang"]) {
     $lang = $_GET["lang"];
     
     exit();
+    header("Location: http://shop.me");
  }

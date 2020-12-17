@@ -39,7 +39,7 @@
 
     <h1><?php echo $languages[$lang][1] ?></h1>
 
-    <form action="add.php">
+    <form action="add.php" method="POST">
         <label><?php echo $languages[$lang][6] ?>:</label>
         <br>
         <input id="name" name="name" type="text">
